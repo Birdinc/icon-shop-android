@@ -54,6 +54,12 @@ public class ItemCardActivity extends AppCompatActivity {
                     }
                 });
                 ok.show();
+                Bundle params = new Bundle();
+                params.putString( Param.ITEM_ID, mItem.mName );
+                params.putString( Param.ITEM_CATEGORY, "icon" );
+                params.putLong( Param.VALUE, mItem.mPrice );
+                FirebaseAnalytics analytics = FirebaseAnalytics.getInstance( ItemCardActivity.this );
+                analytics.logEvent( Event.ADD_TO_CART, params );
             }
         });
 
