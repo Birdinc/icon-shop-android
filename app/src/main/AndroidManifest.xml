@@ -5,6 +5,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.github.googlecodelabs.icon_shop">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <application
         android:name=".App"
         android:allowBackup="true"
